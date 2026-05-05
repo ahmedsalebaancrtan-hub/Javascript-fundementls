@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Manager</title>
+<script src="script.js" defer></script>
+
+<style>
+    body {
+        font-family: Arial;
+        background: #f4f6f9;
+        text-align: center;
+    }
+
+    .container {
+        width: 400px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .buttons {
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #007bff;
+        color: white;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    li {
+        padding: 10px;
+        margin: 5px 0;
+        background: #eee;
+        border-radius: 5px;
+    }
+
+    .passed {
+        background: #d4edda;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Student Manager</h2>
+
+    <input type="text" id="nameInput" placeholder="Student Name">
+    <input type="number" id="scoreInput" placeholder="Student Score">
+
+    <div class="buttons">
+        <button id="addBtn">Add Student</button>
+        <button id="passedBtn">Passed</button>
+        <button id="allBtn">All</button>
+    </div>
+
+    <ul id="studentList">
+     
+    </ul>
+</div>
+
+</body>
+</html>
