@@ -1,0 +1,91 @@
+.slider{
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    background: #000;
+    overflow-y: hidden;
+}
+
+.slides{
+    width: 100%;
+    height: 100%;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    transition: 0.5s ease;
+}
+
+/* Active Image */
+img.displaySlide{
+    display: block;
+    animation: fade 1s;
+}
+
+/* Fade Animation */
+@keyframes fade{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+.prev,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+/* Left Button */
+.prev{
+    left: 20px;
+}
+
+/* Right Button */
+.next{
+    right: 20px;
+}
+
+/* Hover Effect */
+.prev:hover,
+.next:hover{
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .slider{
+        height: 350px;
+    }
+
+    .prev,
+    .next{
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
